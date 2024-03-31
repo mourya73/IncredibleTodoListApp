@@ -22,15 +22,19 @@ import {
 
 
 const styles = StyleSheet.create({
-    task: {
-      padding: 10,
-      borderBottomWidth: 1,
-      borderColor: '#ccc',
-    },
+  task: {
+    padding: 15,
+    borderBottomWidth: 1,
+    borderColor: '#eee',
+    backgroundColor: '#f9f9f9',
+    marginVertical: 4,
+    borderRadius: 5,
+  },
+  taskText: {
+    fontSize: 18,
+  },
     completed: {
       backgroundColor: '#e0e0e0',
     },
-    taskText: {
-      fontSize: 16,
-    }
+   
     });
