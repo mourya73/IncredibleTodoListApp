@@ -4,6 +4,9 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import ToDoForm from './components/ToDoForm';
 import ToDoList from './components/ToDoList';
 
+
+
+
 export default function App() {
   const [tasks, setTasks] = useState([
     'Do laundry',
@@ -11,9 +14,15 @@ export default function App() {
     'Walk dog'
   ]);
 
+  const addTask = (taskText) => {
+    if (!tasks.includes(taskText)) {
+      setTasks([...tasks, taskText]);
+    }
+  };
+
   return (
     <SafeAreaView>
-      <ToDoForm  />
+      <ToDoForm  addTask={addTask}/>
       <ToDoList tasks={tasks} />
       
     </SafeAreaView>
